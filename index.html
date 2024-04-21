@@ -3,6 +3,7 @@
 
 <head>
     <title>Health</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
             margin: 0;
@@ -12,26 +13,22 @@
         }
         
         .loginbox {
-            width: 350px;
-            height: auto;
+            width: 90%;
+            max-width: 350px;
             background: white;
             color: black;
-            top: 50%;
-            left: 50%;
-            position: absolute;
-            transform: translate(-50%, -50%);
+            margin: 50px auto;
             box-sizing: border-box;
             padding: 60px 30px;
             border-radius: 10px;
         }
         
         .avatar {
-            width: 150px;
-            height: 150px;
+            width: 40%;
+            max-width: 150px;
             border-radius: 50%;
-            position: absolute;
-            top: -75px;
-            left: calc(50% - 75px);
+            margin: 0 auto;
+            display: block;
         }
         
         h1 {
@@ -108,13 +105,19 @@
             cursor: pointer;
             margin-bottom: 20px;
         }
+
+        @media (min-width: 768px) {
+            .loginbox {
+                width: 50%;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="loginbox">
         <img src="health.png" class="avatar">
-        <h1>Login</h1>
+        <h1>Health</h1>
         <form id="loginForm" onsubmit="return recommendSandwich()">
             <p>Name</p>
             <input type="text" name="name" placeholder="Enter Name" required>
